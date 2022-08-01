@@ -5,6 +5,7 @@ const categoriesPreviewSection = document.querySelector('#categoriesPreview');
 const genericSection = document.querySelector('#genericList');
 const movieDetailSection = document.querySelector('#movieDetail');
 const likedMoviesSection = document.querySelector('#liked');
+const footer = document.querySelector('#footer');
 
 // Lists & Containers
 const searchForm = document.querySelector('#searchForm');

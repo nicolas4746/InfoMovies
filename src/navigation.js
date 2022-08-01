@@ -61,6 +61,7 @@ function homePage() {
     categoriesPreviewSection.classList.remove('inactive');
     genericSection.classList.add('inactive');
     movieDetailSection.classList.add('inactive');
+    footer.classList.remove('inactive');
     
     getTrendingMoviesPreview();
     getCategoriesPreview();
@@ -81,6 +82,7 @@ function categoriesPage() {
     likedMoviesSection.classList.add('inactive');
     genericSection.classList.remove('inactive');
     movieDetailSection.classList.add('inactive');
+    footer.classList.add('inactive');
 
     const [_, categoryData] = location.hash.split('=');//=>['#category','id-name']=>#category=id-name(hash original) ---- [_,nombre de variable directamente] _ no necesitamos el primer valor 
     let [categoryId, categoryName] = categoryData.split('-');
@@ -108,6 +110,7 @@ function movieDetailsPage() {
     likedMoviesSection.classList.add('inactive');
     genericSection.classList.add('inactive');
     movieDetailSection.classList.remove('inactive');
+    footer.classList.remove('inactive');
 
 
     const [_, movieId] = location.hash.split('=');
@@ -128,6 +131,7 @@ function searchPage() {
     likedMoviesSection.classList.add('inactive');
     genericSection.classList.remove('inactive');
     movieDetailSection.classList.add('inactive');
+    footer.classList.add('inactive');
 
     // ['#search', 'loQueBuscaron']
     const [_, querySearch] = location.hash.split('=');
@@ -152,6 +156,7 @@ function trendsPage() {
     likedMoviesSection.classList.add('inactive');
     genericSection.classList.remove('inactive');
     movieDetailSection.classList.add('inactive');
+    footer.classList.add('inactive');
     
     headerCategoryTitle.innerHTML = 'Tendencias';
     getTrendingMovies();
