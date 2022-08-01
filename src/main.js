@@ -153,7 +153,7 @@ function getPaginatedMoviesByCategory(id) {
             clientHeight 
         } = document.documentElement;
     
-        const scrollIsBottom = (scrollTop + clientHeight) >= (scrollHeight - 15); 
+        const scrollIsBottom = (scrollTop + clientHeight) >= (scrollHeight - 45); 
         // se le resta 15 pixeles para que no sea necesario llegar hasta abajo totalmente.
         const pageIsNotMax = page < maxPage;
         if(scrollIsBottom && pageIsNotMax){
