@@ -157,11 +157,10 @@ button {
 }
 
 .categoriesPreview-list, .categories-list {
-  display: flex;
-  align-items: center;
+  display: grid;
+  gap: 0px;
   justify-content: space-between;
-  position: relative;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill, 150px);
 }
 
 .category-container--loading {
@@ -288,15 +287,13 @@ button {
 
 /* Categories */
 .category-container {
-  width: 45%;
+  width: 100%;
 }
 
 .category-title {
   margin-bottom: 8px;
   cursor: pointer;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: wrap;
 }
 
 .category-title::before {
@@ -388,7 +385,10 @@ button {
 .movieDetail-container {
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
-  padding: 32px 24px;
+  padding-top: 32px;
+  padding-bottom: 50px;
+  padding-left: 24px;
+  padding-right: 24px;
   margin-top: 403px;
   z-index: 1;
   position: absolute;
@@ -434,8 +434,21 @@ button {
   overflow-y: hidden;
   white-space: nowrap;
   width: calc(100vw - 24px);
-  padding-bottom: 16px;
+  padding-bottom: 10px;
   max-height: 225px;
+}
+
+.relatedMovies-scrollContainer::-webkit-scrollbar {
+  width: 10px;    /* width of the entire scrollbar */
+}
+
+.relatedMovies-scrollContainer::-webkit-scrollbar-track {
+  background: var(--purple-light-2);        /* color of the tracking area */
+}
+
+.relatedMovies-scrollContainer::-webkit-scrollbar-thumb {
+  background-color: var(--purple-medium-1);    /* color of the scroll thumb */
+  border-radius: 20px;  
 }
 
 .relatedMovies-scrollContainer .movie-container {
