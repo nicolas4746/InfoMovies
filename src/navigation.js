@@ -131,7 +131,7 @@ function searchPage() {
     likedMoviesSection.classList.add('inactive');
     genericSection.classList.remove('inactive');
     movieDetailSection.classList.add('inactive');
-    footer.classList.add('inactive');
+    footer.classList.remove('inactive');
 
     // ['#search', 'loQueBuscaron']
     const [_, querySearch] = location.hash.split('=');

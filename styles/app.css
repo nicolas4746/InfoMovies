@@ -127,6 +127,9 @@ button {
 .movie-img {
   border-radius: 8px;
   min-height: 250px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .movie-btn {
@@ -181,6 +184,7 @@ button {
 /* Header */
 .header-container {
   padding-top: 40px;
+  padding-bottom: 24px;
 }
 
 .header-container--long {
@@ -352,20 +356,20 @@ button {
 
 /* Generic List (search, trending & category) */
 .genericList-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 32px 24px;
+  display: grid;
+  gap: 25px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit , minmax(100px, 200px));
 }
 
 .genericList-container .movie-container {
   display: inline-block;
-  width: 47.5%;
 }
 
 .genericList-container .movie-img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 
@@ -378,6 +382,7 @@ button {
   z-index: 1;
   position: absolute;
   background-color: var(--purple-light-1);
+  width: 100%;
 }
 
 .movieDetail-title {
