@@ -46,7 +46,6 @@ function navigator() {
 };
 
 function homePage() {
-    console.log('HOME!!!');
     //lo que se tiene que ver(dependiendo del css y de la vista donde estemos)=> .remove('inactive')
     //lo  que no se tiene que ver .add('inactive')
     headerSection.classList.remove('header-container--long');

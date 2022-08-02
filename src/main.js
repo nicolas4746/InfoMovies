@@ -29,9 +29,12 @@ function likeMovie(movie) {
     } else {
         likedMovies[movie.id] = movie;
     }
-
     localStorage.setItem('liked_movies',JSON.stringify(likedMovies));
+    if (location.hash == "") {
+        homePage();
+    }
 }
+
 
 //utils=funciones para reutilizar codigo
 const lazyLoader = new IntersectionObserver((entries) => {
