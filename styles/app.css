@@ -185,7 +185,11 @@ button {
   padding-top: 40px;
   padding-bottom: 24px;
 }
-
+.header-container .header-title-lenguage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .header-container--long {
   background-image: url('https://pics.filmaffinity.com/Deadpool-777527803-large.jpg');
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 19.27%, rgba(0, 0, 0, 0) 29.17%), url(https://pics.filmaffinity.com/Deadpool-777527803-large.jpg);
@@ -198,12 +202,15 @@ button {
 
 .header-container--categoryView {
   background: linear-gradient(180deg, rgba(238, 204, 117, 0.5) 0%, rgba(238, 204, 117, 0) 72.92%);
+  
 } 
 
 .header-title {
   margin-bottom: 16px;
 }
-
+.languageSelector{
+  margin-bottom: 16px;
+}
 .header-arrow {
   font-weight: var(--font-weight-text2);
   font-size: 36px;

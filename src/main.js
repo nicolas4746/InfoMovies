@@ -6,9 +6,15 @@ const api = axios.create({
     },
     params: {
         'api_key' : API_KEY,
+        'language': navigator.language,
     }
 });
 
+let lang = navigator.language;
+languageSelector.addEventListener('click', () => {
+    lang = languageSelector.value;
+    homePage();
+})
 function likedMoviesList() {
     const item = JSON.parse(localStorage.getItem('liked_movies'));
     let movies;
@@ -128,7 +134,11 @@ async function getTrendingMoviesPreview() {
 };
 
 async function getCategoriesPreview() {
-    const {data} = await api('genre/movie/list');
+    const {data} = await api('genre/movie/list',{
+    params:{
+        language: lang,
+    }
+    });
     const categories = data.genres;
     createCategories(categories, categoriesPreviewList);
 };
@@ -262,7 +272,11 @@ async function getPaginatedTrendingMovies() {
 }
 
 async function getMovieById(id) {
-    const {data:movie} = await api(`movie/${id}`);
+    const {data:movie} = await api(`movie/${id}`,{
+        params:{
+            language: lang,
+        }
+        });
     
     const movieImgUrl = 'https://image.tmdb.org/t/p/w500' + movie.poster_path;
 
