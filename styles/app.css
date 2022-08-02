@@ -86,6 +86,17 @@ button {
   font-size: 14px;
   cursor: pointer;
 }
+select{
+  background-color: var(--purple-dark-1);
+  border: none;
+  color: var(--purple-light-2);
+  font-weight: var(--font-weight-text2);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 7px 10px;
+  border-radius: 8px;
+}
+
 
 
 /* Shared */
@@ -190,6 +201,8 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+
+
 .header-container--long {
   background-image: url('https://pics.filmaffinity.com/Deadpool-777527803-large.jpg');
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 19.27%, rgba(0, 0, 0, 0) 29.17%), url(https://pics.filmaffinity.com/Deadpool-777527803-large.jpg);
@@ -209,8 +222,14 @@ button {
   margin-bottom: 16px;
 }
 .languageSelector{
-  margin-bottom: 16px;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
 }
+.languageSelector::-ms-expand {
+  display: none;
+}
+
 .header-arrow {
   font-weight: var(--font-weight-text2);
   font-size: 36px;
