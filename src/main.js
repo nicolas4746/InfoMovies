@@ -128,11 +128,7 @@ async function getTrendingMoviesPreview() {
 };
 
 async function getCategoriesPreview() {
-    const {data} = await api('genre/movie/list',{
-    params:{
-        language: lang,
-    }
-    });
+    const {data} = await api('genre/movie/list');
     const categories = data.genres;
     createCategories(categories, categoriesPreviewList);
 };
