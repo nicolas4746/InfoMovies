@@ -13,7 +13,7 @@ const api = axios.create({
 let lang = navigator.language;
 languageSelector.addEventListener('click', () => {
     lang = languageSelector.value;
-    homePage();
+    navigator();
 })
 function likedMoviesList() {
     const item = JSON.parse(localStorage.getItem('liked_movies'));
