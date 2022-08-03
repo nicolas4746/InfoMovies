@@ -6,15 +6,9 @@ const api = axios.create({
     },
     params: {
         'api_key' : API_KEY,
-        'language': navigator.language,
     }
 });
 
-let lang = navigator.language;
-languageSelector.addEventListener('click', () => {
-    lang = languageSelector.value;
-    navigator();
-})
 function likedMoviesList() {
     const item = JSON.parse(localStorage.getItem('liked_movies'));
     let movies;
@@ -272,11 +266,7 @@ async function getPaginatedTrendingMovies() {
 }
 
 async function getMovieById(id) {
-    const {data:movie} = await api(`movie/${id}`,{
-        params:{
-            language: lang,
-        }
-        });
+    const {data:movie} = await api(`movie/${id}`);
     
     const movieImgUrl = 'https://image.tmdb.org/t/p/w500' + movie.poster_path;
 
